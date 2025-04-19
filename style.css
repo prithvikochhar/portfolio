@@ -53,7 +53,7 @@ nav a{
     grid-template-columns: auto 1fr;
     gap: 1em;
   }
-  form input, form textarea, form button {
+  form input, form textarea, form button, form select{
     font: inherit;
     /* display: block; */
     /* width: 100%; */
@@ -115,5 +115,13 @@ nav a{
   article time {
     font-size: 0.9em;
     color: oklch(45% 2% 160);
+  }
+
+  .color-scheme{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
+    font-family: inherit;
   }
 
