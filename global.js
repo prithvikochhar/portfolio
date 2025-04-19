@@ -38,6 +38,12 @@ function $$(selector, context = document) {
 //     ? "/"
 //     : "/portfolio/"; // replace with your actual GitHub repo name if different
 
+
+for (let p of pages) {
+    let url = p.url;
+    let title = p.title;
+    nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
+  }
 let pages = [
   { url: "", title: "Home" },
   { url: "projects/", title: "Projects" },
@@ -49,11 +55,7 @@ let pages = [
 let nav = document.createElement("nav");
 document.body.prepend(nav);
 
-for (let p of pages) {
-  let url = p.url;
-  let title = p.title;
-  nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
-}
+
 //   a.href = url;
 //   a.textContent = p.title;
 
