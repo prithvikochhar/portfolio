@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project 2 Report</title>
+    <style>
+      :root {
+        --color-neutral-95: hsl(220 10% 95%);
+        --color-neutral-90: hsl(220 10% 90%);
+        --color-neutral-80: hsl(220 10% 80%);
+        --color-neutral-70: hsl(220 10% 70%);
+        --color-neutral-60: hsl(220 10% 60%);
+        --color-neutral-50: hsl(220 10% 50%);
+        --color-neutral-40: hsl(220 10% 40%);
+        --color-neutral-30: hsl(220 10% 30%);
+        --color-neutral-20: hsl(220 10% 20%);
+        --color-neutral-10: hsl(220 10% 10%);
+      }
+
+      html {
+        font: 100%/1.5 system-ui;
+        counter-reset: figure;
+        background: var(--color-neutral-95);
+        max-width: min(75vw, 80em);
+        margin: 0 auto;
+      }
+
+      /* Headings */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.1;
+        font-weight: 600;
+        text-wrap: balance;
+      }
+
+      h1,
+      h2 {
+        border-bottom: 1px solid var(--color-neutral-80);
+        padding-bottom: 0.2em;
+      }
+
+      h1 {
+        margin-block: 1em 0.5rem;
+        font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+        font-weight: 800;
+
+        small {
+          display: block;
+          width: fit-content;
+          padding: 0.2em 0.5em;
+          margin-inline: auto;
+          color: white;
+          background: var(--color-neutral-40);
+          font-size: 40%;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+
+      h2 {
+        font-size: 180%;
+        color: var(--color-neutral-30);
+      }
+
+      h3 {
+        font-size: 130%;
+      }
+
+      /* Lists */
+
+      ul,
+      ol {
+        padding-inline-start: 2em;
+      }
+
+      li {
+        &::marker {
+          color: var(--color-neutral-40);
+        }
+
+        + li {
+          margin-top: 0.2em;
+        }
+      }
+
+      /* Sectioning elements */
+
+      header {
+        padding-block: 1em;
+        text-align: center;
+      }
+
+      main {
+        background: white;
+        color: var(--color-neutral-20);
+        border-radius: 1rem;
+        padding: 0.1rem 2rem;
+      }
+
+      /* Figures */
+
+      figure {
+        margin: 1em 0;
+        padding: 0.5rem;
+        margin-inline: -0.5em;
+        border: 1px solid var(--color-neutral-80);
+        box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+        text-align: center;
+        background: white;
+
+        > figcaption {
+          font: 500 75% var(--font-sans);
+          background: var(--color-neutral-95);
+          padding: 0.5rem;
+          margin: -0.5rem;
+          margin-top: 0.5rem;
+          counter-increment: figure;
+          text-align: left;
+
+          &::before {
+            content: 'Figure ' counter(figure) ': ';
+            font-weight: bold;
+            color: var(--color-neutral-40);
+          }
+
+          a:not(:hover, :focus, :active) {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: color-mix(
+              in lab,
+              currentColor,
+              transparent 70%
+            );
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Assignment 4</small>
+        Persuasive or Deceptive Visualization?
+      </h1>
+
+      <p><strong>Prithvi Kochhar</strong> — <em>prkochhar@ucsd.edu</em></p>
+    </header>
+
+    <main>
+      <h2>Proposition: Complaints from Black civilians against White officers are among the most common ethnic pairings</h2>
+
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img src="proposition_true_heatmap.png" alt="Raw complaint heatmap" style="width: 50%; height: auto;"/>
+          <figcaption>Raw counts showing that Black civilians frequently file complaints against White officers.</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li><strong>+1.5:</strong> Included numeric annotations for clarity and to strengthen credibility with exact values.</li>
+          <li><strong>+1:</strong> Chose a red color palette to evoke urgency and draw attention to the most frequent complaint pairings.</li>
+          <li><strong>+0.5:</strong> Title was chosen to be engaging and immediately capture reader's attention</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img src="proposition_false_heatmap.png" alt="Raw complaint heatmap" style="width: 50%; height: auto;"/>
+          <figcaption>Heatmap showing that complaints against White officers are spread out across Civilian ethnic groups</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li><strong>-1.5:</strong> Normalized by complainant group to downplay total complaint volume and shift interpretation.</li>
+          <li><strong>-1:</strong> Removed annotations so that reader cant compare values exactly</li>
+          <li><strong>-1:</strong> Framed title in a way that implies equality and doesnt emphasize dominance by one ethnic group</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p>
+          Designing both persuasive and oppositional visualizations from the same dataset was harder than I thought it would be. 
+          The first visualization, which was for the proposition was easy to create after doing some exploratory data analysis.  
+          The design decisions were like any other visualizations I create and there were barely any deceptive methods used hence showing the reality of the data making it ethcial.
+        </p>
+        <p>
+          Generating the opposing visualization was the tricky part. 
+          To be able to counter the proposition I had to transform the data by column normalization to construe the real meaning of the data.  
+          I had to make sure my deceptions were not obvious while also being persuasive at the same time.  
+          It was a slightly more technical process but not too hard which made me realize how easy it is to create visualizations to lead masses the wrong way.
+        </p>
+        <p>
+          I've defined ethical analysis as showing visualizations from the true data without having to transform it into making readers think otherwise. 
+          Ive realized that to make a visualization persuasive we do not need to conform to unethical means to transform our existing data to tell a fake story.
+          In my second visualization I crossed the boundary of ethics to change key content to mislead readers. 
+          I've learnt that the transparency of design decision are key for a viewer to understand the process of creating the visualiztion and for them to accept that the persuasion is not unethical. 
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
