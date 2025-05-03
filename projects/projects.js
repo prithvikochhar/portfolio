@@ -153,6 +153,8 @@ function renderPieChart(projectsToPlot) {
   let legend = d3.select('.legend');
   legend.selectAll('li').remove();
 
+  let selectedIndex = -1;
+
   // Re-group by year
   let rolledData = d3.rollups(
     projectsToPlot,
@@ -174,9 +176,32 @@ function renderPieChart(projectsToPlot) {
   // Draw arcs
   arcData.map((d, i) => {
     svg
-      .append('path')
-      .attr('d', arcGenerator(d))
-      .attr('fill', colors(i));
+  .append('path')
+  .attr('d', arcGenerator(d))
+  .attr('fill', colors(i))
+  .on('click', () => {
+    selectedIndex = selectedIndex === i ? -1 : i;
+
+    // Highlight only selected path
+    svg.selectAll('path').attr('class', (_, idx) =>
+      idx === selectedIndex ? 'selected' : null
+    );
+
+    // Highlight matching legend item
+    legend.selectAll('li').attr('class', (_, idx) =>
+      idx === selectedIndex ? 'selected' : null
+    );
+
+    // Filter projects
+    if (selectedIndex === -1) {
+      renderProjects(projects, projectsContainer, 'h2');
+    } else {
+      const year = data[selectedIndex].label;
+      const filtered = projects.filter((p) => p.year === year);
+      renderProjects(filtered, projectsContainer, 'h2');
+    }
+  });
+
   });
 
   // Draw legend
