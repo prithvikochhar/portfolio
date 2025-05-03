@@ -152,7 +152,7 @@ function renderPieChart(projectsToPlot) {
 
   let legend = d3.select('.legend');
   legend.selectAll('li').remove();
-
+  let query = ''
   let selectedIndex = -1;
 
   // Re-group by year
@@ -213,9 +213,7 @@ function renderPieChart(projectsToPlot) {
   });
 }
 renderPieChart(projects);
-
-let query = '';
-
+let query = ''
 let searchInput = document.querySelector('.searchBar');
 
 searchInput.addEventListener('input', (event) => {
@@ -230,6 +228,4 @@ searchInput.addEventListener('input', (event) => {
   renderProjects(filteredProjects, projectsContainer, 'h2');
   renderPieChart(filteredProjects);
 });
-
-
 
