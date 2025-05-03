@@ -135,5 +135,39 @@ nav a{
     max-width: 20em;
     margin-block: 2em;
     overflow: visible;
+    flex-shrink: 0;
   }
+
+  .legend {
+    display: grid;
+    flex:1;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    margin-block: 1em;
+  }
+  
+  .legend li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  
+  .swatch {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: var(--color);
+    border-radius: 0.25em;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    flex-wrap: wrap;
+  }
+  
 
