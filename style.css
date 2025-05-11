@@ -190,3 +190,19 @@ nav a{
     cursor: pointer;
   }
   
+  .stats {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 0.2em 1em;
+    margin-block: 2em;
+  }
+  
+  .stats dt {
+    font-weight: bold;
+    color: gray;
+  }
+  
+  .stats dd {
+    margin: 0;
+  }
+  
