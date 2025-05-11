@@ -205,4 +205,15 @@ nav a{
   .stats dd {
     margin: 0;
   }
+
+  .gridlines line {
+    stroke: lightgray;
+    stroke-opacity: 0.6;
+    shape-rendering: crispEdges;
+  }
+  
+  .gridlines path {
+    display: none; 
+  }
+  
   
