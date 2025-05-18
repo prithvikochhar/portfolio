@@ -30,10 +30,10 @@
         "description": "Analyzed trends in the stock market"
     },
     {
-        "title": "Odio suscipit ab rerum.",
-        "year" : "2022",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ipsum adipisci deserunt quae velit minima ullam, corporis esse iure, explicabo itaque earum laboriosam nam dolorum. Possimus dolorem expedita quisquam quas nesciunt iure, reiciendis animi minima, doloremque quam fugiat? Tempora?"
+        "title": "Bikewatching",
+        "year" : "2025",
+        "image": "bikewatching_viz.png",
+        "description": "Built an interactive geospatial visualization using Mapbox and D3.js to analyze BlueBike traffic across Boston and Cambridge. Circle size encodes total traffic volume, and color indicates direction of flow (arrivals vs. departures), with an interactive slider to filter by time of day."
     },
     {
         "title": "Numquam laudantium omnis at.",
