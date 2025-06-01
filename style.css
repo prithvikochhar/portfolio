@@ -367,3 +367,64 @@ nav a{
   background-color: var(--color);
   border-radius: 50%;
 }
+
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+
+  > * {
+    flex: 1;
+  }
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 50vh;
+}
+
+#scrolly-1 {
+  display: flex;
+  gap: 2rem;
+}
+
+#scatter-story {
+  flex: 1;
+}
+
+#scatter-plot {
+  flex: 1;
+  position: sticky;
+  top: 0;
+  height: 50vh;
+}
+
+#scrolly-2 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+#file-story {
+  flex: 1;
+  position: relative;
+}
+
+#files {
+  flex: 1;
+  position: sticky;
+  top: 0;
+  height: 50vh; /* you can increase if needed */
+  overflow-y: auto;
+}
+
+
+
+

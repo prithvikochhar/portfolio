@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,9 @@
   <time id="commit-time" style="margin-left: auto;"></time>
 </div>
   <div id="stats"></div>
+  <div id="scrolly-1">
+  <div id="scatter-story">some filler text here</div>
+  <div id = "scatter-plot">
   <h2>Commits by time of day</h2>
     <div id="chart"></div>  
     <dl id="commit-tooltip" class="info tooltip" hidden>
@@ -26,8 +29,7 @@
       
         <dt>Date</dt>
         <dd id="commit-date"></dd>
-      
-        <!-- Add: Time, author, lines edited -->
+
         <dt>Time</dt>
         <dd id="commit-time"></dd>
       
@@ -39,18 +41,79 @@
       </dl>
       <p id="selection-count">No commits selected</p>
       <dl id="language-breakdown" class="stats"></dl>
+      </div>
+      </div>
+
+      <dl id="files">
+</dl>
+<div id="file-story"></div>
   <script type="module" src="../global.js" defer></script>
   <script type="module" src="main.js"></script>
 
-  <dl id="files">
-  <!-- we want the following structure for each file:
-  <div>
-    <dt>
-      <code>{file.name}</code>
-    </dt>
-    <dd>{file.lines.length} lines</dd>
+  
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meta</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <h1>Meta Analysis</h1>
+  <p>This page includes stats about the code of this website</p>
+
+  <!-- <div style="display: flex; align-items: baseline; gap: 0.5rem;">
+    <label for="commit-progress">Show commits until:</label>
+    <input type="range" min="0" max="100" value="100" id="commit-progress" />
+    <time id="commit-time" style="margin-left: auto;"></time>
+  </div> -->
+
+  <div id="stats"></div>
+
+  <div id="scrolly-1">
+    <div id="scatter-story"></div>
+    <div id="scatter-plot">
+      <h2>Commits by time of day</h2>
+      <div id="chart" style="height: 800px;"></div>
+
+
+      <dl id="commit-tooltip" class="info tooltip" hidden>
+        <dt>Commit</dt>
+        <dd>
+          <a href="" id="commit-link" target="_blank"></a>
+        </dd>
+
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+
+        <dt>Time</dt>
+        <dd id="commit-time"></dd>
+
+        <dt>Author</dt>
+        <dd id="commit-author"></dd>
+
+        <dt>Lines Edited</dt>
+        <dd id="commit-lines"></dd>
+      </dl>
+
+      <p id="selection-count">No commits selected</p>
+      <dl id="language-breakdown" class="stats"></dl>
+    </div>
   </div>
-  -->
-</dl>
+
+  <!-- <div id="file-story"></div>
+  <dl id="files"></dl> -->
+  <div id="scrolly-2">
+  <div id="file-story"></div>
+  <dl id="files"></dl>
+</div>
+
+
+  <script type="module" src="../global.js" defer></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
