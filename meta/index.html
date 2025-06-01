@@ -15,7 +15,6 @@
   <input type="range" min="0" max="100" value="100" id="commit-progress" />
   <time id="commit-time" style="margin-left: auto;"></time>
 </div>
-
   <div id="stats"></div>
   <h2>Commits by time of day</h2>
     <div id="chart"></div>  
@@ -42,5 +41,16 @@
       <dl id="language-breakdown" class="stats"></dl>
   <script type="module" src="../global.js" defer></script>
   <script type="module" src="main.js"></script>
+
+  <dl id="files">
+  <!-- we want the following structure for each file:
+  <div>
+    <dt>
+      <code>{file.name}</code>
+    </dt>
+    <dd>{file.lines.length} lines</dd>
+  </div>
+  -->
+</dl>
 </body>
 </html>
