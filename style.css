@@ -256,6 +256,10 @@ nav a{
     transition: 200ms;
     transform-origin: center;
     transform-box: fill-box;
+    @starting-style {
+  r: 0;
+}
+
   }
   
   circle:hover {
@@ -297,3 +301,33 @@ nav a{
     fill: #ff6b6b;
   }
   
+  .projects img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.commit-slider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.commit-slider label {
+  width: 150px;  
+  white-space: nowrap; 
+  flex-shrink: 0;      
+}
+
+
+#commit-progress {
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* #commit-time {
+  margin-left: auto;
+  white-space: nowrap;
+} */
